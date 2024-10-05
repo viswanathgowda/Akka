@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+#timer {
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+/* Background GIF */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("seoinguk-eating.gif") no-repeat center center fixed; /* Replace with your fireworks GIF URL */
+  background-size: contain; /* Use contain to fit the entire GIF */
+  z-index: 0;
+  opacity: 0.5; /* Adjust for visibility of text */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em; /* Reduce size for tablets */
+  }
+
+  p {
+    font-size: 1.2em; /* Reduce size for tablets */
+  }
+
+  #timer {
+    font-size: 1.5em; /* Reduce size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em; /* Further reduce size for mobile */
+  }
+
+  p {
+    font-size: 1em; /* Further reduce size for mobile */
+  }
+
+  #timer {
+    font-size: 1.2em; /* Further reduce size for mobile */
+  }
+}
